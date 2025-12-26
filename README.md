@@ -1,6 +1,4 @@
-# NextDown
-
-## AI-Powered NFL Team Performance Predictor
+# NextDown: AI-Powered NFL Team Performance Predictor
 
 NextDown is an NFL analytics pipeline made primarily with Python that uses multi-season team data and machine learning to predict **points scored** and **win probability**, delivered through an interactive dashboard.
 
