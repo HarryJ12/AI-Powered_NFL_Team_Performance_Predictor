@@ -1,6 +1,6 @@
 # NextDown: AI-Powered NFL Team Performance Predictor
 
-Project containing `prediction.py` and data `theOne.csv`.
+Prediction model project containing `prediction.py` and data `theOne.csv`.
 
 Quick start (macOS / zsh):
 
