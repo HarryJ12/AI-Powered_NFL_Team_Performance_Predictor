@@ -1,6 +1,6 @@
 # NextDownAPP
 
-Small project containing `prediction.py` and data `theOne.csv`.
+Project containing `prediction.py` and data `theOne.csv`.
 
 Quick start (macOS / zsh):
 
