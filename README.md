@@ -4,7 +4,8 @@ NextDown is an NFL analytics pipeline made primarily with Python that uses multi
 
 
 ## Overview
--  Used Colab to clean and analyze **relevant seasons of NFL team statistics**
+-  Used Colab to clean and analyze **relevant seasons of NFL team statistics** found on [Kaggle](https://www.kaggle.com/datasets/cviaxmiwnptr/nfl-team-stats-20022019-espn/data)
+
         
 -   Trained ML models using engineered features for:
     
