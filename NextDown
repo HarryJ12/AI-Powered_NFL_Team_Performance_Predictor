@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+VENV311_PY="$(pwd)/.venv311/bin/python"
+APP_PATH="/Users/hjoshi/NextDownAPP/app.py"
+if [ -x "$VENV311_PY" ]; then
+  exec "$VENV311_PY" -m streamlit run "$APP_PATH" "$@"
+else
+  # Fallback to any streamlit on PATH using system python
+  exec python3 -m streamlit run "$APP_PATH" "$@"
+fi

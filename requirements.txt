@@ -1,0 +1,16 @@
+pandas
+numpy
+
+# Dev tools
+black
+flake8
+pytest
+
+# Scientific / ML
+scikit-learn
+joblib
+matplotlib
+scipy
+
+streamlit
+watchdog

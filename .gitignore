@@ -1,0 +1,8 @@
+.venv/
+.venv311/
+__pycache__/
+*.pyc
+.vscode/
+*.log
+*.pid
+*.DS_Store
