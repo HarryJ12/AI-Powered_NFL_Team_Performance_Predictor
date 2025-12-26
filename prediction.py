@@ -100,11 +100,9 @@ def run_models(df: pd.DataFrame) -> Tuple[dict, dict, dict]:
     # Clip negative predictions
     y_pred_lr = np.clip(y_pred_lr, 0, None)
     
-    # Evaluate & print evaluation metrics
+    # Evaluate metrics
     reg_rmse = np.sqrt(mean_squared_error(y_test, y_pred_lr))
     reg_r2 = r2_score(y_test, y_pred_lr)
-    print("Linear Regression RMSE:", reg_rmse)
-    print("Linear Regression R²:", reg_r2)
     
     reg_results = {
         "metrics": {"rmse": float(reg_rmse), "r2": float(reg_r2)},
@@ -166,16 +164,11 @@ def run_models(df: pd.DataFrame) -> Tuple[dict, dict, dict]:
     logi_proba = lr2.predict_proba(X_test_scaled)[:, 1]
     logi_preds = (logi_proba >= 0.5).astype(int)
     
-    # Evaluate & print evaluation metrics
+    # Evaluate metrics
     clf_accuracy = accuracy_score(y_test_clf, logi_preds)
     clf_f1 = f1_score(y_test_clf, logi_preds)
     clf_brier = brier_score_loss(y_test_clf, logi_proba)
     clf_roc_auc = roc_auc_score(y_test_clf, logi_proba)
-    
-    print("Logistical Regression Accuracy:", clf_accuracy)
-    print("Logistical Regression F1 Score:", clf_f1)
-    print("Logistical Regression Brier Score:", clf_brier)
-    print("Logistical Regression ROC-AUC:", clf_roc_auc)
     
     clf_results = {
         "metrics": {"accuracy": float(clf_accuracy), "f1": float(clf_f1), "brier": float(clf_brier), "roc_auc": float(clf_roc_auc)},
@@ -194,11 +187,9 @@ def run_models(df: pd.DataFrame) -> Tuple[dict, dict, dict]:
     # Apply meta-model to each (score prediction, win probability) pair
     meta_scores = np.array([vegas_meta(score, prob) for score, prob in zip(y_pred_lr, cl)])
     
-    # Evaluate & print evaluation metrics
+    # Evaluate metrics
     meta_rmse = np.sqrt(mean_squared_error(y_test, meta_scores))
     meta_r2 = r2_score(y_test, meta_scores)
-    print(f"Meta Model RMSE: {meta_rmse:.3f}")
-    print(f"Meta Model R²: {meta_r2:.3f}")
     
     meta_results = {
         "metrics": {"rmse": float(meta_rmse), "r2": float(meta_r2)},
