@@ -1,6 +1,6 @@
 # NextDown
 
-### AI-Powered NFL Team Performance Predictor
+## AI-Powered NFL Team Performance Predictor
 
 NextDown is an NFL analytics pipeline made primarily with Python that uses multi-season team data and machine learning to predict **points scored** and **win probability**, delivered through an interactive dashboard.
 
@@ -55,24 +55,24 @@ Python · Pandas · Scikit-learn · Streamlit · Plotly · Colab
 
 ## Run Locally
 
-# Clone repository
+**Clone repository**
 ```git clone https://github.com/your-username/NextDown.git
 cd NextDown
 ```
 
-# Create virtual environment
+**Create virtual environment**
 ```
 python -m venv venv
 source venv/bin/activate  # macOS/Linux
 # venv\Scripts\activate   # Windows
 ```
 
-# Install dependencies
+**Install dependencies**
 ```
 pip install -r requirements.txt
 ```
 
-# Launch dashboard
+**Launch dashboard**
 ```
 streamlit run app.py
 ```
