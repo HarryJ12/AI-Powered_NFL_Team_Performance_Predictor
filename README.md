@@ -56,17 +56,23 @@ Python · Pandas · Scikit-learn · Streamlit · Plotly · Colab
 ## Run Locally
 
 # Clone repository
-git clone https://github.com/your-username/NextDown.git
+```git clone https://github.com/your-username/NextDown.git
 cd NextDown
+```
 
 # Create virtual environment
+```
 python -m venv venv
 source venv/bin/activate  # macOS/Linux
 # venv\Scripts\activate   # Windows
+```
 
 # Install dependencies
+```
 pip install -r requirements.txt
+```
 
 # Launch dashboard
+```
 streamlit run app.py
-
+```
