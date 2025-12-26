@@ -1,4 +1,4 @@
-# NextDownAPP
+# NextDown: AI-Powered NFL Team Performance Predictor
 
 Project containing `prediction.py` and data `theOne.csv`.
 
