@@ -20,7 +20,7 @@ st.set_page_config(
 
 # Caches the loaded DataFrame so the CSV is read only once per app run (speeds up in-app performance)
 @st.cache_data
-def load_df(path: str = "csvs/UseThis.csv"):
+def load_df(path: str = "CSVs/UseThis.csv"):
     return load_data(path)
 
 # Train all models once and caches them in memory to avoid retraining during in-app usage (speeds up in-app performance)
